@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+:root{
+    --color-fondo:#000;
+    --color-dialogo:#3490DE;
+    --color-placeholder: #fff;
+    --color-1:#733669;
+    --color-2:#F2A0DC;
+    --color-3:#D94188;
+    --color-4:#F25270;
+}
+*{
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: red 1px solid; */
+}
+
+body{
+    background: var(--color-fondo); 
+    width: 100vw;
+    height: 100vh;
+    /* overflow: hidden; */
+}
+
+header{
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.header_text{
+    color: var(--color-3);
+    text-shadow: 2px 2px 20px var(--color-2);
+    font-size: 4vw;
+}
+
+main{
+    width: 100%;
+}
+
+.container_contenido{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+dialog{
+    z-index: 100;
+    top: 5%;
+    left: 66%;
+    font-size:1.5rem;
+    padding: 10px 15px;
+    color:var(--color-dialogo);
+    text-shadow: 2px 2px 20px var(--color-dialogo);
+    background: transparent;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.parrafo_text{
+    font-size: 3vw;
+    color: var(--color-3);
+    text-shadow: 2px 2px 20px var(--color-2);
+}
+
+
+
+.entrada_text{
+    position: relative;
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.entrada_text:last-of-type{
+    align-self: stretch;
+}
+
+.entrada_text, .salida_text{
+    margin: 3%;
+}
+
+.text_area_entrada{
+    overflow: auto;
+    resize: none;
+    width: 100%;
+    height: 70%;
+    padding: 1rem;
+    border-radius: 15px;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 20px var(--color-4);
+    background: rgba(255, 255, 255, 0.09);
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1) ;
+    backdrop-filter: blur(2px) ;
+    border: 1px solid rgba(255, 255, 255, 0.3) ;
+    color: rgb(255, 255, 255);
+}
+
+.salida_text{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text_area_salida{
+    overflow: auto;
+    resize: none;
+    width: 100%;
+    height: 70%;
+    padding: 1rem;
+    border-radius: 15px;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 20px var(--color-4);
+    background: rgba(255, 255, 255, 0.09);
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1) ;
+    backdrop-filter: blur(2px) ;
+    border: 1px solid rgba(255, 255, 255, 0.3) ;
+    color: rgb(255, 255, 255);
+}
+textarea::placeholder {
+    text-shadow: 2px 2px 20px var(--color-4);
+    color: var(--color-placeholder);
+    font-size: 1.5rem;
+}
+
+.clear_btn{
+    right: 2%;
+    bottom: 20%;
+    position: absolute;
+    width: 50px;
+    align-items: flex-end;
+    transition: .5s;
+}
+.clear_btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 5px red);
+}
+.clear_btn:active{
+    transform: scale(0.96);
+}
+
+.botones{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.btn_encr {
+    color: var(--color-3);
+    text-shadow: 2px 2px 20px var(--color-2);
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-size: 1.6vw;
+    font-weight: bold;
+    letter-spacing: 3px;
+    border: none;
+    background: none;
+    overflow: hidden;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: box-shadow ease-in-out 0.3s, background-color ease-in-out 0.1s,
+    letter-spacing ease-in-out 0.1s, transform ease-in-out 0.1s;
+}
+
+.btn_encr:hover{
+    background-color: var(--color-2);
+    color: #050801;
+    box-shadow: 0 0 5px var(--color-3),
+                0 0 25px var(--color-2),
+                0 0 50px var(--color-3),
+                0 0 200px var(--color-2);
+    -webkit-box-reflect: below 1px 
+    linear-gradient(transparent,#0005);
+}
+.btn_encr:active {
+    box-shadow: 16px 16px 33px #121212, -16px -16px 33px #303030,
+                fuchsia 0px 0px 30px 5px;
+    background-color: fuchsia;
+    transform: scale(0.95);
+}
+
+.btn_des{
+    color: var(--color-3);
+    text-shadow: 2px 2px 20px var(--color-2);
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-size: 1.6vw;
+    border: none;
+    font-weight: bold;
+    letter-spacing: 3px;
+    background: none;
+    overflow: hidden;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: box-shadow ease-in-out 0.3s, background-color ease-in-out 0.1s,
+    letter-spacing ease-in-out 0.1s, transform ease-in-out 0.1s;
+
+}
+.btn_des:hover{
+    background-color: var(--color-2);
+    color: #050801;
+    box-shadow: 0 0 5px var(--color-3),
+                0 0 25px var(--color-2),
+                0 0 50px var(--color-3),
+                0 0 200px var(--color-2);
+    -webkit-box-reflect: below 1px 
+    linear-gradient(transparent,#0005);
+}
+.btn_des:active {
+    box-shadow: 16px 16px 33px #121212, -16px -16px 33px #303030,
+                fuchsia 0px 0px 30px 5px;
+    background-color: fuchsia;
+    transform: scale(0.95);
+}
+
+.btn_copiado_contenido{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 2%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.btn_copiado{
+    display: flex;
+    width: 2rem;
+    cursor: pointer;
+    transition: .5s;
+}
+.btn_copiado:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 5px red);
+}
+.texto_copiado{
+    bottom: 5%;
+    text-shadow: 2px 2px 20px var(--color-3);
+    font-size: 2vw;
+    display: none;
+    transition: 5s;
+    color: var(--color-3);
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .clear_btn{
+        right: 2%;
+        bottom: 22%;
+    }
+}
+@media (min-width: 550px ) and (max-width: 768px) {
+
+    .clear_btn{
+        right: 2%;
+        bottom: 25%;
+    }
+} 
+@media (width <= 550px ){
+    .container_contenido{
+        flex-direction: column;
+        align-items: center;
+    }
+    .header_text{
+        font-size: 3rem;
+    }
+    .parrafo_text{
+        font-size: 2rem;
+    }
+    .text_area{
+        font-size: 1.3rem;
+        padding: 8px;
+        margin: 4px;
+        height: 100%;
+    }
+    textarea::placeholder{
+        font-size: 1.3rem;
+    }
+    .entrada_text{
+        width: 90%;
+        height: 300px;
+    }
+    .clear_btn{
+        right: 2%;
+        bottom: 25%;
+        width: 40px;
+    }
+    .salida_text{
+        width: 90%;
+        height: 300px;
+    }
+    .btn_encr{
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+    .btn_des{
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+    .btn_copiado{
+        width: 3rem;
+    }
+}
+
+.wallpaper span{
+    position: fixed;
+    bottom: -100px;
+    height: 50px;
+    width: 50px;
+    z-index: -1;
+    background-color: var(--color-fondo);
+    box-shadow: 0 0 50px var(--color-1),
+                0 0 100px var(--color-2),
+                0 0 150px var(--color-3),
+                0 0 200px var(--color-4);
+    animation: animate 10s linear infinite;
+}
+.wallpaper span:nth-child(1){
+    left: 60px;
+    animation-delay: 0.6s;
+    color: aqua;
+}
+.wallpaper span:nth-child(2){
+    left: 10%;
+    animation-delay: 3s;
+    width: 60px;
+    height: 60px;
+
+}
+.wallpaper span:nth-child(3){
+    left: 20%;
+    animation-delay: 2s;
+
+}
+.wallpaper span:nth-child(4){
+    left: 20%;
+    animation-delay: 5s;
+    width: 80px;
+    height: 80px;
+}
+.wallpaper span:nth-child(5){
+    left: 40%;
+    animation-delay: 1s;
+}
+.wallpaper span:nth-child(6){
+    left: 50%;
+    animation-delay: 7s;
+}
+.wallpaper span:nth-child(7){
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("./img/Removal.png");
+    left: 60%;
+    animation-delay: 6s;
+    width: 100px;
+    height: 100px;
+}
+.wallpaper span:nth-child(8){
+    left: 70%;
+    animation-delay: 8s;
+}
+.wallpaper span:nth-child(9){
+    left: 80%;
+    animation-delay: 6s;
+    width: 90px;
+    height: 90px;
+}
+.wallpaper span:nth-child(10){
+    left: 90%;
+    animation-delay: 4s;
+}
+
+@keyframes animate{
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    80%{
+        opacity: .7;
+    }
+    100%{
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+
+    }
+}
