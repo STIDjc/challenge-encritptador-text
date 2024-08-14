@@ -44,7 +44,7 @@ function desencriptar(){
 
 //validar caracteres no permitidos
 function validarCaracteres(text){
-    let validar = new RegExp("[^a-zñ\ ]+");
+    let validar = new RegExp("[^a-zñ\r\n ]+");
     return validar.test(text);
 }
 
