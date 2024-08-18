@@ -242,6 +242,10 @@ textarea::placeholder {
     transform: scale(1.1);
     filter: drop-shadow(0 0 5px red);
 }
+.btn_copiado:active{
+    transform: scale(0.96);
+    filter: drop-shadow(0 0 5px red);
+}
 .texto_copiado{
     bottom: 5%;
     text-shadow: 2px 2px 20px var(--color-3);
@@ -251,17 +255,54 @@ textarea::placeholder {
     color: var(--color-3);
 }
 
-@media (min-width: 768px) and (max-width: 1024px){
+
+@media (width > 768px) and (width <= 1024px){
+    .btn_encr:hover, .btn_des:hover{
+        pointer-events: none;
+    }
+
+    .btn_encr:active, .btn_des:active {
+        box-shadow: 16px 16px 33px #121212, -16px -16px 33px #303030,
+                    var(--color-2) 0px 0px 30px 5px;
+        background-color: var(--color-2);
+        transform: scale(0.95);
+    }
+
     .clear_btn{
         right: 2%;
-        bottom: 22%;
+        bottom: 26%;
+    }
+
+    .clear_btn:hover, .btn_copiado:hover{
+        pointer-events: none;
+    }
+
+    .clear_btn:active, .btn_copiado:active{
+        filter: drop-shadow(0 0 20px red);
     }
 }
-@media (min-width: 550px ) and (max-width: 768px) {
+@media (width > 550px ) {
+
+    .btn_encr:hover, .btn_des:hover{
+        pointer-events: none;
+    }
+
+    .btn_encr:active, .btn_des:active {
+        box-shadow: 16px 16px 33px #121212, -16px -16px 33px #303030,
+                    var(--color-2) 0px 0px 30px 5px;
+        background-color: var(--color-2);
+        transform: scale(0.95);
+    }
 
     .clear_btn{
         right: 2%;
         bottom: 25%;
+    }
+    .clear_btn:hover, .btn_copiado:hover{
+        pointer-events: none;
+    }
+    .clear_btn:active, .btn_copiado:active{
+        filter: drop-shadow(0 0 20px red);
     }
 } 
 @media (width <= 550px ){
@@ -293,20 +334,59 @@ textarea::placeholder {
         bottom: 25%;
         width: 40px;
     }
+
+    .btn_encr:hover, .btn_des:hover{
+        pointer-events: none;
+    }
+
+    .btn_encr:active, .btn_des:active {
+        box-shadow: 16px 16px 33px #121212, -16px -16px 33px #303030,
+                    var(--color-2) 0px 0px 30px 5px;
+        background-color: var(--color-2);
+        transform: scale(0.95);
+    }
+
+    .clear_btn:hover, .btn_copiado:hover{
+        pointer-events: none;
+    }
+    .clear_btn:active, .btn_copiado:active{
+        filter: drop-shadow(0 0 20px red);
+    }
+
     .salida_text{
         width: 90%;
         height: 300px;
     }
-    .btn_encr{
+    .btn_encr, .btn_des{
         font-size: 1rem;
         padding: 10px 15px;
     }
-    .btn_des{
-        font-size: 1rem;
-        padding: 10px 15px;
-    }
+
     .btn_copiado{
         width: 3rem;
+    }
+    
+}
+@media (width < 376px){
+    .parrafo_text{
+        font-size: 1.9rem;
+    }
+    .btn_encr:hover, .btn_des:hover{
+        pointer-events: none;
+    }
+
+    .btn_encr:active, .btn_des:active {
+        box-shadow: 16px 16px 33px #121212, -16px -16px 33px #303030,
+                    var(--color-2) 0px 0px 30px 5px;
+        background-color: var(--color-2);
+        transform: scale(0.95);
+    }
+
+    .clear_btn:hover, .btn_copiado:hover{
+        pointer-events: none;
+    }
+    .clear_btn:active, .btn_copiado:active{
+        filter: drop-shadow(0 0 20px red);
     }
 }
 
