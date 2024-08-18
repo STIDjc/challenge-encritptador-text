@@ -257,31 +257,12 @@ textarea::placeholder {
 
 
 @media (width > 768px) and (width <= 1024px){
-    .btn_encr:hover, .btn_des:hover{
-        pointer-events: none;
-    }
-
-    .btn_encr:active, .btn_des:active {
-        box-shadow: 16px 16px 33px #121212, -16px -16px 33px #303030,
-                    var(--color-2) 0px 0px 30px 5px;
-        background-color: var(--color-2);
-        transform: scale(0.95);
-    }
-
     .clear_btn{
         right: 2%;
         bottom: 26%;
     }
-
-    .clear_btn:hover, .btn_copiado:hover{
-        pointer-events: none;
-    }
-
-    .clear_btn:active, .btn_copiado:active{
-        filter: drop-shadow(0 0 20px red);
-    }
 }
-@media (width > 550px ) {
+@media (width > 550px ) and (width < 768) {
 
     .btn_encr:hover, .btn_des:hover{
         pointer-events: none;
