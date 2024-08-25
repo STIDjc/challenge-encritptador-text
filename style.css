@@ -134,7 +134,7 @@ textarea::placeholder {
     position: absolute;
     width: 50px;
     align-items: flex-end;
-    transition: .5s;
+    transition:all .5s ease-in-out;
 }
 .clear_btn:hover{
     cursor: pointer;
@@ -236,7 +236,7 @@ textarea::placeholder {
     display: flex;
     width: 2rem;
     cursor: pointer;
-    transition: .5s;
+    transition: all .5s ease-in-out;
 }
 .btn_copiado:hover{
     transform: scale(1.1);
@@ -262,7 +262,7 @@ textarea::placeholder {
         bottom: 26%;
     }
 }
-@media (width > 550px ) and (width < 768) {
+@media (width > 550px ) and (width < 768px) {
 
     .clear_btn{
         right: 2%;

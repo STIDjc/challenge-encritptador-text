@@ -81,7 +81,8 @@ function copiarTexto(){
     if(textarea.value.trim()!== ""){
         textarea.select();
          //copiar el texto seleccionado
-        document.execCommand("copy");
+        // document.execCommand("copy");
+        navigator.clipboard.writeText(textarea.value);
 
         mensajeCopiado.style.display = "inline";//mostrar el mensaje en la pantalla
         imgCopiado.style.display = "none";
