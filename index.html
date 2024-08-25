@@ -8,38 +8,44 @@
     <link rel="icon" type="img/png" href="./img/digitales1.png">
     <link rel="stylesheet" href="style.css">
 </head>
-</head>
 
 <body>
     <header class="header">
         <h1 class="header_text">ENCRIPTADOR</h1>
     </header>
-    <main class="contenedor">
-        <div class="container_contenido">
-            <dialog id="alerta_info"></dialog>
-            <div class="entrada_text">
-                <p class="parrafo_text" id="error_text">Encriptar y desencriptar texto</p>
-                <textarea class="text_area_entrada" name="texto" id="text_input"
-                    placeholder="¡SOLO MINUSCULAS SIN CARACTERES ESPECIALES!" onkeyup="validar(this)"></textarea>
+    <main class="container_contenido">
+        <dialog id="alerta_info"></dialog>
+        <div class="entrada_text">
+            <p class="parrafo_text" id="error_text">Encriptar y desencriptar texto</p>
+            <div class="text_area_entrada">
+                <div class="text_area_overflow">
+                    <textarea class="text_area_input" name="texto" id="text_input"
+                        placeholder="¡SOLO MINUSCULAS SIN CARACTERES ESPECIALES!" onkeyup="validar(this)"></textarea>
+                </div>
                 <img src="./img/polvo.png" onclick="clearText()" class="clear_btn" id="boton-clear">
-                <div class="botones">
-                    <button onclick="encriptar()" class="btn_encr" type="button" id="encritp_text">
-                        encriptar
-                    </button>
-                    <button onclick="desencriptar()" class="btn_des" type="button" id="desencrip_text">
-                        desencriptar
-                    </button>
-                </div>
             </div>
-            <div class="salida_text">
-                <p class="parrafo_text" id="text_encrip">Texto</p>
-                <textarea class="text_area_salida" name="texto" id="panel" readonly="readonly"></textarea>
-                <div class="btn_copiado_contenido">
-                    <img onclick="copiarTexto()" id="img_copiado" src="img/copiadd.svg" class="btn_copiado">
-                    <span class="texto_copiado" id="text_copiado">TEXTO COPIADO</span>
-                </div>
+            <div class="botones">
+                <button onclick="encriptar()" class="btn_encr" type="button" id="encritp_text">
+                    encriptar
+                </button>
+                <button onclick="desencriptar()" class="btn_des" type="button" id="desencrip_text">
+                    desencriptar
+                </button>
             </div>
         </div>
+        <div class="salida_text">
+            <p class="parrafo_text" id="text_encrip">Texto</p>
+            <div class="text_area_salida">
+                <div class="text_area_salida_overflow">
+                    <textarea class="text_area_salida_text" name="texto" id="panel" readonly="readonly"></textarea>
+                </div>
+            </div>
+            <div class="btn_copiado_contenido">
+                <img onclick="copiarTexto()" id="img_copiado" src="img/copiadd.svg" class="btn_copiado">
+                <span class="texto_copiado" id="text_copiado">TEXTO COPIADO</span>
+            </div>
+        </div>
+
     </main>
 
     <div class="wallpaper">
